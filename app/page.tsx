@@ -12,7 +12,7 @@ export default function Home() {
       description:
         "Especializado en gameplay, herramientas, prototipos rápidos y optimización. Actualmente desarrollando Far Beyond Reach y un motor estilo Doom en C++.",
       download: "Descargar CV",
-      retumeUrl: "https://drive.google.com/file/d/1bmK4KThfCx21FdpVAK_bgpCfcTaPDWUr/view?usp=drive_link",
+      resumeUrl: "https://drive.google.com/file/d/1bmK4KThfCx21FdpVAK_bgpCfcTaPDWUr/view?usp=drive_link",
       portfolio: "Ver Portfolio",
       featured: "Proyectos destacados",
       more_info: "Ver más →",
@@ -57,7 +57,7 @@ export default function Home() {
       description:
         "Specialized in gameplay, tools, rapid prototyping and optimization. Currently developing Far Beyond Reach and a Doom-style C++ raycaster engine.",
       download: "Download CV",
-      retumeUrl: "https://drive.google.com/file/d/145f2Ckuq7CjZNGYwpzRPSeTFqX2ARDzA/view?usp=drive_link",
+      resumeUrl: "https://drive.google.com/file/d/145f2Ckuq7CjZNGYwpzRPSeTFqX2ARDzA/view?usp=drive_link",
       portfolio: "View Portfolio",
       featured: "Featured Projects",
       more_info: "More info →",
@@ -151,7 +151,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="{t[lang].retumeUrl}"
+              href={t[lang].resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-lg bg-sky-600 hover:bg-sky-500 transition font-semibold"
