@@ -38,7 +38,7 @@ export default function Home() {
       skills_tools: "Herramientas",
       about: "Sobre mí",
       about_text:
-      "Soy Game Developer con experiencia en Unity y C#. Me especializo en gameplay, herramientas, prototipos rápidos y optimización. Disfruto diseñar y crear sistemas claros, escalables y con buen rendimiento. Actualmente desarrollo Far Beyond Reach y un motor estilo Doom en C++. Busco oportunidades en España a partir de 2026.",
+      "Soy Game Developer con experiencia en Unity y C#. Me especializo en gameplay, herramientas, prototipos rápidos y optimización. Disfruto diseñar y crear sistemas claros, escalables y con buen rendimiento. Actualmente desarrollo Far Beyond Reach y un motor estilo Doom en C++.",
       contact: "Contacto",
       contact_sub: "Podés escribirme directamente por:",
       email: "Email",
@@ -83,7 +83,7 @@ export default function Home() {
       skills_tools: "Tools",
       about: "About Me",
       about_text:
-      "I am a Game Developer with experience in Unity and C#. I specialize in gameplay, tools, rapid prototyping and optimization. I enjoy designing and creating clear, scalable and high-performance systems. Currently developing Far Beyond Reach and a Doom-style C++ raycaster engine. Looking for opportunities in Spain from 2026 onward.",
+      "I am a Game Developer with experience in Unity and C#. I specialize in gameplay, tools, rapid prototyping and optimization. I enjoy designing and creating clear, scalable and high-performance systems. Currently developing Far Beyond Reach and a Doom-style C++ raycaster engine.",
       contact: "Contact",
       contact_sub: "You can reach me through:",
       email: "Email",
