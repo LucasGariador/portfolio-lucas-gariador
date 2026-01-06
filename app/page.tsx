@@ -9,7 +9,6 @@ export const metadata = {
     description: 'Mira mis proyectos y experiencia.',
     images: [
       {
-        // Esta URL apunta directamente a la API que creaste arriba
         url: 'https://www.lucasgariador.dev/api/og?title=Bienvenido a mi Portfolio',
         width: 1200,
         height: 630,
