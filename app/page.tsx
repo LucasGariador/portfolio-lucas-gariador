@@ -2,20 +2,6 @@
 
 import { useState } from "react";
 
-export const metadata = {
-  title: 'Mi Portfolio',
-  openGraph: {
-    title: 'Mi Portfolio de Programador',
-    description: 'Mira mis proyectos y experiencia.',
-    images: [
-      {
-        url: 'https://www.lucasgariador.dev/api/og?title=Bienvenido a mi Portfolio',
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
-};
 
 export default function Home() {
   const [lang, setLang] = useState<"es" | "en">("es");
