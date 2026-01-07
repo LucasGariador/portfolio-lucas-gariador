@@ -23,7 +23,7 @@ export default function Home() {
       p1_link: "",
       p2_title: "Mini Doom Raycaster",
       p2_text:
-        "Motor estilo Doom clásico con raycasting, texturas, corrección de distorsión, z-buffer y sprites. Enfocado en aprender gráficos 3D clásicos y reforzar C++.",
+        "Desarrollo de un motor de renderizado pseudo-3D desde cero utilizando C++ y SDL2. Implementación de algoritmos de Raycasting con corrección de distorsión (fisheye), mapeado de texturas con precisión de píxel, gestión de Z-buffer para profundidad y renderizado de sprites mediante proyección. Enfocado en la optimización de lógica de bajo nivel y arquitectura de motores gráficos.",
       p2_link: "https://github.com/LucasGariador/MiniDoom",
       p3_title: "NPCs con LLM en Unity",
       p3_text:
@@ -31,7 +31,7 @@ export default function Home() {
       p3_link: "",
       p4_title: "Drive for Speed (Mobile)",
       p4_text:
-        "Mantenimiento y actualización de juego mobile con millones de descargas. Nuevas features, bugs, optimización y soporte multiplataforma.",
+        "Desarrollo y mantenimiento de sistemas core para un título móvil con +100 millones de descargas en Google Play. Responsable de la implementación de nuevas mecánicas de juego, optimización de rendimiento (framerate y memoria) para dispositivos de gama baja y media, y refinamiento de pipelines de producción automatizados. Resolución de bugs críticos en un entorno de producción real con una base de usuarios masiva.",
       p4_link: "https://play.google.com/store/apps/details?id=com.mastercomlimited.cardriving_t&pcampaignid=web_share",
       skills: "Habilidades",
       skills_game: "Desarrollo de Juegos",
@@ -68,7 +68,7 @@ export default function Home() {
       p1_link: "",
       p2_title: "Mini Doom Raycaster",
       p2_text:
-        "Classic Doom-style engine with raycasting, wall textures, distortion correction, z-buffer and sprite rendering. Focused on understanding old-school 3D and reinforcing C++.",
+        "A custom pseudo-3D rendering engine built from scratch using C++ and SDL2. Features a Raycasting pipeline with fish-eye distortion correction, pixel-perfect texture mapping, Z-buffering for depth management, and sprite projection systems. Developed to master low-level graphics programming, memory management, and game engine architecture.",
       p2_link: "https://github.com/LucasGariador/MiniDoom",
       p3_title: "Unity LLM NPCs",
       p3_text:
@@ -76,7 +76,7 @@ export default function Home() {
       p3_link: "",
       p4_title: "Drive for Speed (Mobile)",
       p4_text:
-        "Maintenance and feature development for a mobile game with millions of downloads. Worked on features, bug fixes, optimization and production pipelines.",
+        "Engineering and feature development for a top-tier mobile title with over 100M+ downloads on the Play Store. Delivered high-impact gameplay systems and performance optimizations for a global user base. Key contributor to bug fixing in live-ops environments and the streamlining of CI/CD production pipelines. Expertly balanced new feature delivery with the rigorous stability requirements of a massive-scale production environment.",
       p4_link: "https://play.google.com/store/apps/details?id=com.mastercomlimited.cardriving_t&pcampaignid=web_share",
       skills: "Skills",
       skills_game: "Game Development",
@@ -227,6 +227,7 @@ export default function Home() {
         <li>Event Systems</li>
         <li>AI / State Machines</li>
         <li>Shader Graph / URP</li>
+        <li>Optimization (CPU & Memory)</li>
       </ul>
     </div>
 
