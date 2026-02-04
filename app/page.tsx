@@ -15,7 +15,7 @@ export default function Home() {
         "Especializado en optimización, arquitectura de motores y sistemas escalables. Ex-Core Engineer en Boxitsoft (+100M descargas).",
       download: "Descargar CV",
       // IMPORTANTE: Cambia este link por el de tu NUEVO PDF optimizado
-      resumeUrl: "https://drive.google.com/file/d/1qfLU7NozPB0S4ccAqKLiNx85cBWzj8XY/view?usp=sharing", 
+      resumeUrl: "https://drive.google.com/file/d/1UHfU-ypDRqFQJx_REJdcpkSJsdnD0Y3B/view?usp=sharing", 
       portfolio: "Ver Demos",
       
       // --- PROYECTO ESTRELLA (VOXEL) ---
@@ -66,7 +66,7 @@ export default function Home() {
       description:
         "Specialized in optimization, engine architecture, and scalable systems. Formerly Core Engineer at Boxitsoft (+100M downloads).",
       download: "Download CV",
-      resumeUrl: "https://drive.google.com/file/d/1qfLU7NozPB0S4ccAqKLiNx85cBWzj8XY/view?usp=sharing",
+      resumeUrl: "https://drive.google.com/file/d/1UHfU-ypDRqFQJx_REJdcpkSJsdnD0Y3B/view?usp=sharing",
       portfolio: "View Demos",
 
       // --- HERO PROJECT (VOXEL) ---
