@@ -10,7 +10,7 @@ export default function Home() {
       name: "Lucas Gariador",
       role: "High-Performance Game Programmer | Unity & C++",
       // AQUI: La frase clave para los reclutadores
-      relocation: "Mudándome a Madrid, España (Marzo 2026) • Elegible para Permiso de Trabajo UE",
+      relocation: "Madrid, España • Autorización de Trabajo de la UE",
       description:
         "Especializado en optimización, arquitectura de motores y sistemas escalables. Ex-Core Engineer en Boxitsoft (+100M descargas).",
       download: "Descargar CV",
@@ -62,7 +62,7 @@ export default function Home() {
       name: "Lucas Gariador",
       role: "High-Performance Game Programmer | Unity & C++",
       // AQUI: La frase clave en inglés (Golden Ticket)
-      relocation: "Relocating to Madrid, Spain (March 2026) • Eligible for EU Work Permit",
+      relocation: "Madrid, Spain • EU Work Authorization",
       description:
         "Specialized in optimization, engine architecture, and scalable systems. Formerly Core Engineer at Boxitsoft (+100M downloads).",
       download: "Download CV",
