@@ -1,58 +1,43 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  const [lang, setLang] = useState<"es" | "en">("en"); // Empieza en inglés por defecto para reclutadores
+  const [lang, setLang] = useState<"es" | "en">("en");
 
   const t = {
     es: {
       name: "Lucas Gariador",
-      role: "High-Performance Game Programmer | Unity & C++",
-      // AQUI: La frase clave para los reclutadores
+      role: "Software Engineer | C++ & .NET",
       relocation: "Madrid, España • Autorización de Trabajo de la UE",
-      description:
-        "Especializado en optimización, arquitectura de motores y sistemas escalables. Ex-Core Engineer en Boxitsoft (+100M descargas).",
+      description: "Especializado en sistemas de alto rendimiento, arquitecturas escalables e ingeniería core. Experiencia sólida en C++ y el ecosistema .NET. Ex-Core Engineer para un producto con +100M de usuarios.",
       download: "Descargar CV",
-      // IMPORTANTE: Cambia este link por el de tu NUEVO PDF optimizado
-      resumeUrl: "https://drive.google.com/file/d/1UHfU-ypDRqFQJx_REJdcpkSJsdnD0Y3B/view?usp=sharing", 
-      portfolio: "Ver Demos",
-      
-      // --- PROYECTO ESTRELLA (VOXEL) ---
-      latest_demo: "Última Demo Técnica",
-      voxel_title: "Massive Voxel Physics Engine (Unity DOTS)",
-      voxel_desc: "Prototipo de estrés técnico diseñado para llevar Unity DOTS al límite. Gestiona +60.000 entidades físicas activas a 150 FPS. Implementa detección de colisiones desacoplada del Main Thread usando Burst Compiler y C# Job System, con gestión manual de memoria (Memory Chunking) para evitar picos de GC.",
-      voxel_tech: ["Unity 6", "DOTS", "ECS", "Burst Compiler", "C# Jobs"],
+      resumeUrl: "https://drive.google.com/file/d/11eRKyzuL6HBRKy_ocXSfG2kfc7XzEJHb/view?usp=drive_link",
+      portfolio: "Ver Proyectos Destacados",
+      latest_demo: "Caso de Estudio: Rendimiento",
+      voxel_title: "High-Performance Entity System (C#)",
+      voxel_desc: "Prototipo de estrés técnico enfocado en multithreading y Data-Oriented Design. Gestiona +60.000 entidades físicas activas a 150 FPS utilizando C# Job System y compilación Burst.",
+      voxel_tech: ["C#", ".NET", "Data-Oriented Design", "Multithreading", "Memory Allocation"],
       view_code: "Ver Código",
-      watch_demo: "Ver Demo Completa",
-      
-      featured: "Otros Proyectos",
+      featured: "Proyectos de Ingeniería",
       more_info: "Ver más →",
-      
-      // Proyectos Antiguos
-      p1_title: "Mini Doom Raycaster",
-      p1_text: "Motor de renderizado pseudo-3D escrito desde cero en C++ y SDL2. Implementa Raycasting con corrección 'fisheye', mapeado de texturas pixel-perfect y gestión manual de Z-buffer. Enfocado en programación gráfica de bajo nivel.",
-      
-      p2_title: "Drive for Speed (Mobile)",
-      p2_text: "Ingeniería Core para un título con +100M de descargas. Optimicé sistemas de gameplay y memoria para dispositivos low-end, asegurando estabilidad en un entorno Live-Ops masivo.",
-      
-      p3_title: "Far Beyond Reach",
-      p3_text: "Juego de exploración espacial hexagonal. Diseñé la arquitectura de eventos y el sistema de pathfinding A* optimizado.",
-      
-      p4_title: "Unity LLM NPCs",
-      p4_text: "Integración de IA Generativa local (Ollama) en Unity para diálogos dinámicos de NPCs en tiempo real.",
-
-      // Skills
+      p1_title: "2.5D Raycaster Engine",
+      p1_text: "Motor de renderizado 2.5D escrito desde cero en C++ y SDL2, estructurado con estándares de uso comercial y gestión manual de memoria.",
+      p2_title: "Core Systems Optimization",
+      p2_text: "Ingeniería Core y optimización de sistemas en C# para un título móvil top-tier con +100M de descargas.",
+      p3_title: "Hexagonal A* Architecture",
+      p3_text: "Arquitectura basada en eventos y optimización de algoritmos de pathfinding A* aplicados a simulaciones en cuadrículas complejas.",
+      p4_title: "Local LLM Integration",
+      p4_text: "Integración en tiempo real de Inteligencia Artificial Generativa local (Ollama) mediante APIs y scripts en Python.",
       skills: "Habilidades Técnicas",
       skills_core: "Core & Performance",
-      skills_engine: "Motores & Herramientas",
-      skills_arch: "Arquitectura",
-
+      skills_engine: "Frameworks & Herramientas",
+      skills_arch: "Arquitectura & Diseño",
       about: "Sobre mí",
-      about_text: "Soy un Game Programmer enfocado en el rendimiento. Tras trabajar en títulos móviles masivos (+100M usuarios), ahora me especializo en Data-Oriented Design (DOTS) y C++ para crear simulaciones complejas que corren suaves como la seda.",
-      
+      about_text: "Software Engineer bilingüe (C2) con título técnico superior de la UTN. Me enfoco en resolver problemas complejos de rendimiento y en el diseño de arquitecturas robustas. Mi experiencia desarrollando motores y herramientas me ha dado un conocimiento profundo de C++, C# y los sistemas subyacentes del hardware.",
       contact: "Contacto",
-      contact_sub: "Hablemos sobre oportunidades en Madrid:",
+      contact_sub: "Hablemos sobre oportunidades de software y backend en Madrid:",
       nav_projects: "Proyectos",
       nav_skills: "Skills",
       nav_about: "Sobre mí",
@@ -60,50 +45,35 @@ export default function Home() {
     },
     en: {
       name: "Lucas Gariador",
-      role: "High-Performance Game Programmer | Unity & C++",
-      // AQUI: La frase clave en inglés (Golden Ticket)
+      role: "Software Engineer | C++ & .NET",
       relocation: "Madrid, Spain • EU Work Authorization",
-      description:
-        "Specialized in optimization, engine architecture, and scalable systems. Formerly Core Engineer at Boxitsoft (+100M downloads).",
+      description: "Specialized in high-performance systems, scalable architectures, and core engineering. Strong background in C++ and the .NET ecosystem. Formerly Core Engineer for a product with 100M+ users.",
       download: "Download CV",
-      resumeUrl: "https://drive.google.com/file/d/1UHfU-ypDRqFQJx_REJdcpkSJsdnD0Y3B/view?usp=sharing",
-      portfolio: "View Demos",
-
-      // --- HERO PROJECT (VOXEL) ---
-      latest_demo: "Latest Technical Demo",
-      voxel_title: "Massive Voxel Physics Engine (Unity DOTS)",
-      voxel_desc: "Technical prototype pushing the limits of Unity DOTS. Handles 60,000+ active physical entities at 150 FPS. Features collision detection decoupled from the Main Thread using Burst Compiler & C# Job System, with manual memory chunking to eliminate GC spikes.",
-      voxel_tech: ["Unity 6", "DOTS", "ECS", "Burst Compiler", "C# Jobs"],
+      resumeUrl: "https://drive.google.com/file/d/1EiYETvvvjOtxKPIkmiIzF6XtfNndWwY8/view?usp=drive_link",
+      portfolio: "View Featured Work",
+      latest_demo: "Performance Case Study",
+      voxel_title: "High-Performance Entity System (C#)",
+      voxel_desc: "Technical stress prototype focused on multithreading and Data-Oriented Design. Handles 60,000+ active physical entities at 150 FPS using C# Job Systems and Burst compilation.",
+      voxel_tech: ["C#", ".NET", "Data-Oriented Design", "Multithreading", "Memory Allocation"],
       view_code: "View Source",
-      watch_demo: "Watch Demo",
-
-      featured: "Selected Works",
+      featured: "Engineering Projects",
       more_info: "More info →",
-
-      // Projects
-      p1_title: "Mini Doom Raycaster",
-      p1_text: "Custom pseudo-3D rendering engine built from scratch in C++ and SDL2. Features Raycasting pipeline with fish-eye correction, pixel-perfect texture mapping, and manual Z-buffering. Focused on low-level graphics programming.",
-      
-      p2_title: "Drive for Speed (Mobile)",
-      p2_text: "Core engineering for a top-tier mobile title with 100M+ downloads. Delivered critical performance optimizations for low-end devices and maintained stability in a massive-scale live-ops environment.",
-      
-      p3_title: "Far Beyond Reach",
-      p3_text: "Hex-based space exploration game. Designed the event architecture and optimized A* pathfinding systems.",
-      
-      p4_title: "Unity LLM NPCs",
-      p4_text: "Real-time integration of local Generative AI (Ollama) within Unity for dynamic, unscripted NPC dialogue.",
-
-      // Skills
+      p1_title: "2.5D Raycaster Engine",
+      p1_text: "Custom 2.5D rendering engine built from scratch in C++ and SDL2, structured with commercial-use standards and manual memory management.",
+      p2_title: "Core Systems Optimization",
+      p2_text: "Core engineering and system optimization in C# for a top-tier mobile product with 100M+ downloads.",
+      p3_title: "Hexagonal A* Architecture",
+      p3_text: "Event-driven architecture and optimized A* pathfinding algorithms applied to complex grid simulations.",
+      p4_title: "Local LLM Integration",
+      p4_text: "Real-time integration of local Generative AI (Ollama) through APIs and Python scripting.",
       skills: "Technical Skills",
       skills_core: "Core & Performance",
-      skills_engine: "Engines & Tools",
-      skills_arch: "Architecture",
-
+      skills_engine: "Frameworks & Tools",
+      skills_arch: "Architecture & Design",
       about: "About Me",
-      about_text: "I am a performance-focused Game Programmer. After shipping features for massive mobile titles (+100M users), I now specialize in Data-Oriented Design (DOTS) and C++ to build complex simulations that run silky smooth.",
-      
+      about_text: "Bilingual Software Engineer (C2) with a higher technical degree from UTN. I focus on solving complex performance issues and designing robust architectures. My background building engines and tools has given me deep insights into C++, C# (.NET), and underlying hardware systems.",
       contact: "Contact",
-      contact_sub: "Let's talk about opportunities in Madrid:",
+      contact_sub: "Let's talk about software and backend opportunities in Madrid:",
       nav_projects: "Projects",
       nav_skills: "Skills",
       nav_about: "About",
@@ -120,14 +90,12 @@ export default function Home() {
           <span className="font-bold text-lg tracking-tight">
             Lucas<span className="text-sky-500">Gariador</span>
           </span>
-
           <div className="hidden md:flex gap-8 text-sm font-medium text-slate-400">
             <a href="#portfolio" className="hover:text-white transition">{t[lang].nav_projects}</a>
             <a href="#skills" className="hover:text-white transition">{t[lang].nav_skills}</a>
             <a href="#about" className="hover:text-white transition">{t[lang].nav_about}</a>
             <a href="#contact" className="hover:text-white transition">{t[lang].nav_contact}</a>
           </div>
-
           <button
             className="px-3 py-1.5 rounded-md border border-slate-700 text-xs font-bold hover:border-sky-500 hover:text-sky-400 transition"
             onClick={() => setLang(lang === "es" ? "en" : "es")}
@@ -140,169 +108,250 @@ export default function Home() {
       <div className="max-w-5xl mx-auto px-6 pt-32 pb-20">
 
         {/* HERO SECTION */}
-        <section className="text-center mb-24">
+        <motion.section 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-24"
+        >
           <div className="inline-block px-3 py-1 mb-4 rounded-full bg-sky-900/30 border border-sky-700/50 text-sky-300 text-xs font-semibold tracking-wide uppercase">
             {t[lang].role}
           </div>
-          
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
             {t[lang].name}
           </h1>
-
-          {/* LA LÍNEA DEL GOLDEN TICKET */}
           <h2 className="text-lg md:text-xl text-emerald-400 font-medium mb-6">
             📍 {t[lang].relocation}
           </h2>
-
           <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
             {t[lang].description}
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={t[lang].resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold transition shadow-lg shadow-sky-900/20"
-            >
+            <a href={t[lang].resumeUrl} target="_blank" className="px-8 py-3.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold transition shadow-lg shadow-sky-900/20">
               {t[lang].download}
             </a>
-            <a
-              href="#portfolio"
-              className="px-8 py-3.5 rounded-lg border border-slate-700 hover:border-white hover:bg-slate-800 transition font-semibold"
-            >
+            <a href="#portfolio" className="px-8 py-3.5 rounded-lg border border-slate-700 hover:border-white hover:bg-slate-800 transition font-semibold">
               {t[lang].portfolio}
             </a>
           </div>
-        </section>
+        </motion.section>
 
-        {/* FEATURED HERO PROJECT (VOXELS) */}
+        {/* FEATURED HERO PROJECT */}
         <section id="portfolio" className="mb-20">
             <div className="flex items-center gap-4 mb-8">
                 <h3 className="text-2xl font-bold text-white">{t[lang].latest_demo}</h3>
                 <div className="h-px bg-slate-800 flex-1"></div>
             </div>
 
-            <article className="group relative rounded-2xl border border-slate-800 bg-slate-900/50 overflow-hidden hover:border-sky-500/50 transition duration-500">
+            <motion.article 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="group relative rounded-2xl border border-slate-800 bg-slate-900/50 overflow-hidden hover:border-sky-500/50 transition duration-500"
+            >
                 <div className="grid md:grid-cols-2 gap-0">
-                    {
-                      <div className="bg-black min-h-[300px] flex items-center justify-center relative overflow-hidden group">
-    
-    <video 
-        src="/demo_planeta.mp4"
-        autoPlay 
-        loop 
-        muted 
-        playsInline 
-        className="object-cover w-full h-full absolute inset-0 opacity-90 group-hover:opacity-100 transition duration-500"
-    />
-    
-    {/* Gradiente opcional para que el texto se lea mejor si el video es muy claro */}
-    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent z-10 md:hidden"></div>
-</div>
-                    }
-
+                    <div className="bg-black min-h-[300px] flex items-center justify-center relative overflow-hidden">
+                        <video src="/demo_planeta.mp4" autoPlay loop muted playsInline className="object-cover w-full h-full" />
+                    </div>
                     <div className="p-8 flex flex-col justify-center">
                         <h4 className="text-2xl font-bold text-sky-400 mb-4">{t[lang].voxel_title}</h4>
-                        <p className="text-slate-300 mb-6 leading-relaxed">
-                            {t[lang].voxel_desc}
-                        </p>
-                        
-                        {/* Tech Tags */}
+                        <p className="text-slate-300 mb-6 leading-relaxed">{t[lang].voxel_desc}</p>
                         <div className="flex flex-wrap gap-2 mb-8">
                             {t[lang].voxel_tech.map((tech, i) => (
-                                <span key={i} className="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">
-                                    {tech}
-                                </span>
+                                <span key={i} className="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">{tech}</span>
                             ))}
-                        </div>
-
-                        <div className="flex gap-4">
-                             <a href="https://github.com/LucasGariador/ECS-destructible-planets" target="_blank" className="text-white hover:text-sky-400 font-semibold text-sm flex items-center gap-2">
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                {t[lang].view_code}
-                             </a>
                         </div>
                     </div>
                 </div>
-            </article>
+            </motion.article>
         </section>
 
         {/* OTHER PROJECTS GRID */}
         <section className="mb-24">
-             <div className="flex items-center gap-4 mb-8">
-                <h3 className="text-xl font-bold text-slate-300">{t[lang].featured}</h3>
-                <div className="h-px bg-slate-800 flex-1"></div>
-            </div>
+          <div className="flex items-center gap-4 mb-8">
+            <h3 className="text-xl font-bold text-slate-300">{t[lang].featured}</h3>
+            <div className="h-px bg-slate-800 flex-1"></div>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 justify-items-center">
             {[
-                { title: t[lang].p1_title, text: t[lang].p1_text, link: "https://github.com/LucasGariador/MiniDoom" },
-                { title: t[lang].p2_title, text: t[lang].p2_text, link: "https://play.google.com/store/apps/details?id=com.mastercomlimited.cardriving_t" },
-                { title: t[lang].p3_title, text: t[lang].p3_text, link: "" },
-                { title: t[lang].p4_title, text: t[lang].p4_text, link: "" },
+              {
+                title: t[lang].p1_title, 
+                text: t[lang].p1_text,
+                tech: ["C++", "SDL2", "Memory Mgmt", "Systems"],
+                demoUrl: "https://lucasgariador.itch.io",
+                codeUrl: "https://github.com/LucasGariador/MiniDoomRaycaster",
+                badge: "Core Systems",
+                iconPath: "/gear.svg",
+                gifPath: "/DoomLikeEngineFinal.gif"
+              },
+              { 
+                title: t[lang].p2_title, 
+                text: t[lang].p2_text,
+                tech: ["C#", ".NET", "Architecture", "Optimization"],
+                demoUrl: "https://play.google.com/store/apps/details?id=com.mastercomlimited.cardriving_t&hl=en",
+                codeUrl: "https://github.com/LucasGariador", 
+                badge: "Enterprise Scale",
+                iconPath: "/phone.svg",
+                gifPath: "/dfs-gif.gif"
+              },
+              { 
+                title: t[lang].p3_title, 
+                text: t[lang].p3_text,
+                tech: ["C#", "Algorithms", "A*", "Event-Driven"],
+                demoUrl: "https://lucasgariador.itch.io/far-beyond-reach", 
+                codeUrl: "https://github.com/LucasGariador",
+                badge: "Algorithms",
+                iconPath: "/phone.svg",
+                gifPath: "/far-beyond-reach.gif"
+              },
+              { 
+                title: t[lang].p4_title, 
+                text: t[lang].p4_text,
+                tech: ["Python", "API Integration", "LLMs", "C#"],
+                demoUrl: "https://lucasgariador.itch.io", 
+                codeUrl: "https://github.com/LucasGariador/Unity-LLM-NPCs",
+                badge: "R&D / AI",
+                iconPath: "/ai.svg",
+                gifPath: "/ai.gif"
+              },
             ].map((p, index) => (
-                <article key={index} className="flex flex-col justify-between p-6 rounded-xl border border-slate-800 bg-slate-900/30 hover:bg-slate-900 hover:border-slate-600 transition group">
-                   <div>
-                       <h4 className="text-lg font-bold text-slate-100 mb-3 group-hover:text-sky-400 transition">{p.title}</h4>
-                       <p className="text-sm text-slate-400 leading-relaxed mb-6">{p.text}</p>
-                   </div>
-                   {p.link && (
-                       <a href={p.link} target="_blank" className="text-xs font-bold text-sky-500 uppercase tracking-wide hover:text-sky-400">
-                           {t[lang].more_info}
-                       </a>
-                   )}
-                </article>
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="group w-full max-w-[340px] h-[280px] [perspective:1000px] shadow-2xl shadow-sky-900/30 transition-shadow duration-300 hover:shadow-sky-500/30"
+              >
+                <div className="relative w-full h-full duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-xl rounded-xl">
+                  
+                  {/* PARTE FRONTAL */}
+                  <div className="absolute inset-0 w-full h-full rounded-xl bg-slate-900/40 border border-slate-800 p-6 flex flex-col justify-between [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(0deg)] z-20 overflow-hidden">
+                    <img 
+                      src={p.gifPath} 
+                      alt="" 
+                      className="absolute inset-0 w-full h-full object-cover opacity-60 z-0" 
+                      aria-hidden="true"
+                    />
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
+                      <div className="absolute -top-10 -left-10 w-24 h-24 bg-sky-500/20 rounded-full blur-2xl animate-pulse"></div>
+                      <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-emerald-500/20 rounded-full blur-2xl animate-pulse [animation-delay:1s]"></div>
+                    </div>
+
+                    <div className="relative z-10 flex justify-between items-start">
+                      <span className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-sky-400 bg-sky-950/50 border border-sky-800/60 rounded-full">
+                        {p.badge}
+                      </span>
+                      <img 
+                        src={p.iconPath} 
+                        alt=""
+                        className="w-10 h-10 opacity-60 group-hover:opacity-100 transition-opacity duration-300" 
+                        aria-hidden="true"
+                      />
+                    </div>
+
+                    <div className="relative z-10">
+                      <h4 className="text-xl font-bold text-white mb-2">{p.title}</h4>
+                      <p className="text-xs text-sky-300 font-mono tracking-tight">{p.tech.slice(0, 3).join(" • ")}</p>
+                    </div>
+                  </div>
+
+                  {/* PARTE TRASERA */}
+                  <div className="absolute inset-0 w-full h-full rounded-xl bg-slate-900 border border-sky-500/40 p-6 flex flex-col justify-between [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] group-hover:z-30">
+                    
+                    <div className="absolute inset-0 rounded-xl border border-sky-500/30 pointer-events-none"></div>
+
+                    <div className="flex flex-col gap-2">
+                      <h4 className="text-base font-bold text-sky-400">{p.title}</h4>
+                      <p className="text-xs text-slate-300 leading-relaxed line-clamp-4">
+                        {p.text}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col gap-4">
+                      <div className="flex flex-wrap gap-1.5">
+                        {p.tech.map((t, idx) => (
+                          <span key={idx} className="text-[10px] font-semibold px-2 py-0.5 bg-slate-800 text-slate-300 rounded border border-slate-700/60">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex gap-2">
+                        <a 
+                          href={p.demoUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex-1 py-2 rounded bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold text-center transition-all duration-200"
+                        >
+                          View Project
+                        </a>
+                        <a 
+                          href={p.codeUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="px-3 py-2 rounded bg-slate-800 border border-slate-700 hover:border-slate-500 hover:bg-slate-700 text-slate-300 transition-all duration-200"
+                          title="View Code"
+                        >
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </motion.div>
             ))}
-            </div>
+          </div>
         </section>
 
-        {/* SKILLS SECTION (REORGANIZADO) */}
+        {/* SKILLS SECTION */}
         <section id="skills" className="mb-24">
            <h3 className="text-3xl font-bold mb-10 text-center">{t[lang].skills}</h3>
            
            <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
-             {/* Core */}
              <div className="p-6 rounded-xl bg-slate-900/20 border border-slate-800/50">
                <h4 className="text-sky-400 font-bold mb-4 uppercase text-sm tracking-wider">{t[lang].skills_core}</h4>
                <ul className="space-y-2 text-slate-300 text-sm">
-                 <li>C++ & C# (Advanced)</li>
+                 <li>C++ / C# (.NET)</li>
                  <li>Data-Oriented Design</li>
                  <li>Memory Management</li>
-                 <li>Multithreading / Jobs</li>
+                 <li>Multithreading & Concurrency</li>
                  <li>Algorithm Optimization</li>
                </ul>
              </div>
 
-             {/* Engine */}
              <div className="p-6 rounded-xl bg-slate-900/20 border border-slate-800/50">
                <h4 className="text-sky-400 font-bold mb-4 uppercase text-sm tracking-wider">{t[lang].skills_engine}</h4>
                <ul className="space-y-2 text-slate-300 text-sm">
-                 <li>Unity 6 (DOTS, ECS, Burst)</li>
-                 <li>SDL2 (Graphics API)</li>
-                 <li>Profiling Tools</li>
+                 <li>.NET Framework / Core</li>
+                 <li>Entity Component Systems</li>
+                 <li>Profiling & Debugging Tools</li>
                  <li>Git / Plastic SCM</li>
-                 <li>Render Pipelines (URP)</li>
+                 <li>API Integrations</li>
                </ul>
              </div>
 
-             {/* Architecture */}
              <div className="p-6 rounded-xl bg-slate-900/20 border border-slate-800/50">
-                <h4 className="text-sky-400 font-bold mb-4 uppercase text-sm tracking-wider">{t[lang].skills_arch}</h4>
-                <ul className="space-y-2 text-slate-300 text-sm">
-                  <li>System Decoupling</li>
-                  <li>ScriptableObject Arch</li>
-                  <li>Live-Ops Integration</li>
-                  <li>CI/CD Pipelines</li>
-                  <li>SOLID Principles</li>
-                </ul>
+               <h4 className="text-sky-400 font-bold mb-4 uppercase text-sm tracking-wider">{t[lang].skills_arch}</h4>
+               <ul className="space-y-2 text-slate-300 text-sm">
+                 <li>Event-Driven Architecture</li>
+                 <li>System Decoupling</li>
+                 <li>SOLID Principles</li>
+                 <li>CI/CD Pipelines</li>
+                 <li>Scalable Data Structures</li>
+               </ul>
              </div>
            </div>
         </section>
 
         {/* ABOUT & CONTACT */}
         <div className="grid md:grid-cols-2 gap-12 items-start" id="contact">
-            {/* About */}
             <section id="about">
                 <h3 className="text-2xl font-bold mb-6">{t[lang].about}</h3>
                 <p className="text-slate-400 leading-relaxed mb-6">
